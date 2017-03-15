@@ -1,0 +1,45 @@
+
+TOPIC:- ShoppingCart for placing the order and generate a BILL in Bill.csv
+
+Brief: The Project consist of 5 Packages{Clients,DAO,Domain,Services,Uti}
+
+A. How to run the application
+- In "Clients" Package:
+		~ Run ClientUser.java containing main function {Add all users from user.txt} 
+		~ Run ClientProduct.java containing main function {Add all products from product.txt}
+		~ Run ClientOrder.java containing main function {Add Order from order.txt + orderDetails from orderDetail.txt}
+
+- The Final Output is the bill generated in (Bill.csv) file in "Util" Package
+
+B&C. How many clients and Sequence of the clients to run 
+- There are three clients main() files to run according to the given sequence.(1->2_>3)
+		1. ClientUsers		
+		2. ClientProducts
+		3. ClientOrder
+
+D. Supported Functionalities 
+- Insert the values from the text file into the Database.
+- After buying the product the values get automatically Updated into the Database.
+- The final Bill is generated with the OrderId, ProductId, ProductQuantity
+- The Total Amount is calculated in csv file.
+
+
+Order Id: 47			
+NAME	QUANTITY	INITIALPRICE	TOTAL
+Mango	10	100	1000
+Banana	5	50	250
+Total Price= 1250			
+
+
+E. Summary
+- The Project is divided into DESIGN PATTERN to get more Abstraction:-
+			~ CLIENT(main() methods)
+			~ DOMAIN(containing call set() and get() methods)
+			~ SERVICES(get call form CLIENTS and call Domain to set the values in the object and pass the object to DAO)
+			~ DAO(For interaction form DATABASE, Get the object from SERVICES and interact with MYSQL database and insert the values)
+			~UTIL(contain Connection and Text file)
+- For database MYSQL is used and Programming Language JAVA is used.
+- For database connection JDBC(Java Database Connection) is Used{FILE in UTIL Package}
+
+
+======================================= {The END }======================================================

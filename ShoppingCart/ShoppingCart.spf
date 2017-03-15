@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ShoppingCart</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>root@127.0.0.1</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClhPcmRlcnNJZNIeHy0u
+			XxAPTlNNdXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5T
+			TXV0YWJsZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tl
+			eWVkQXJjaGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBL
+			AFIAWgBlAGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIA
+			wwDFAMoA1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEzATgBSgFO
+			AVcBXAFrAW8BdwF8AX8BkQGUAZkAAAAAAAACAQAAAAAAAAA6AAAA
+			AAAAAAAAAAAAAAABmw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {836, 486}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>table</key>
+			<string>Orders</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>145</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>create table orderDetails (OrdersId int,OrderProductsId int, OrderDetailsQuantity int,PRIMARY KEY (OrdersId,OrderProductsId))</string>
+		<string>alter table OrdersDetails add column Orderid int(5) NOT NULL</string>
+		<string>select * from Orders</string>
+		<string>alter table OrdersDetails modify OrdersDetailsTotal int(10) NOT NULL</string>
+		<string>alter table OrdersDetails modify OrdersDetailsQuantity int(10) NOT NULL</string>
+		<string>select * from OrdersDetails</string>
+		<string>alter table OrdersDetails CHANGE OrderDetailsQuantity OrdersDetailsQuantity INT(10)</string>
+		<string>alter table OrdersDetails modify OrdersProductsId int(10) NOT NULL</string>
+		<string>alter table OrdersDetails modify OrderProductId int(10) NOT NULL</string>
+		<string>alter table Orders modify OrdersCreatedDate date NOT NULL</string>
+		<string>alter table Orders modify OrdersUsersId int(10) NOT NULL</string>
+		<string>alter table Users modify UsersAddress varchar(255) NOT NULL</string>
+		<string>alter table Users modify UsersEmailId varchar(100) NOT NULL</string>
+		<string>alter table Users modify UsersEmailId varchar(100) NOT NULL, UsersAddress varchar(255) NOT NULL</string>
+		<string>alter table Users modify UsersName varchar(100) NOT NULL</string>
+		<string>alter table Users modify UsersName NOT NULL</string>
+		<string>alter table Users modify UsersName NOT NULL,UsersEmailId NOT NULL , UsersAddress NOT NULL</string>
+		<string>alter table OrdersDetails add column OrdersInitialPrice int(5) NOT NULL DEFAULT '0'</string>
+		<string>alter table OrdersDetails ADD CONSTRAINT FOREIGN KEY (OrdersProductsId) REFERENCES Products (ProductsId)</string>
+		<string>alter table OrdersDetails ADD CONSTRAINT `Foreign Key' FOREIGN KEY (OrdersProductsId) REFERENCES Products (ProductsId);</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.26</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
